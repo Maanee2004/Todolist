@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tutoriel</title>
+</head>
+<body>
+    <h1>Suivez le tuto avec moi</h1>
+    <label for="texte">Entrez un texte :</label>
+    <input type="text" id="texte" placeholder="Tapez ici ">
+    <button id="envoyer">send</button>
+    <p id="affichage"> Le texte apparaitra ici</p>
+<div class="buttons">
+    <button id="bouton-add">Ajout</button>
+    <button id="bouton-modif">Modifier</button>
+
+
+    <div class="enreg-container">
+        <button id="bouton-enreg">Enregistrer</button>
+        <select name="bouton-enreg" id="format-enreg">
+         <option value="csv">CSV</option>
+         <option value="json">JSON</option>
+        </select>
+
+    </div>
+</div>
+<script>
+    document.getElementById('envoyer').addEventListener('click', function() {
+            let texte = document.getElementById('texte').value;
+            document.getElementById('affichage').textContent = texte;
+        }); 
+
+
+</script>
+</body>
+</html>
